@@ -1,3 +1,3 @@
 # Respuesta a incidentes
 
-[https://tryhackme.com/room/introtoirandim](https://tryhackme.com/room/introtoirandim)
+Intro: [https://tryhackme.com/room/introtoirandim](https://tryhackme.com/room/introtoirandim)
