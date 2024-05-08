@@ -12,14 +12,13 @@ ip a
 
 cambiar en /etc/suricata/suricata.yaml --> af-packet --> interface por la interfaz de red usada
 
-<pre><code>default-rule-path: /var/lib/suricata/rules
+```
+default-rule-path: /var/lib/suricata/rules
 rule-files:
   - suricata.rules
-
-<strong>
-</strong><strong>detect-engine:
-</strong>  -  rule-reload: true
-</code></pre>
+detect-engine:
+  -  rule-reload: true
+```
 
 suricata-update
 
