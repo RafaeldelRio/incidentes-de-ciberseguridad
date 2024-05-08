@@ -1,6 +1,6 @@
 # Suricata
 
-sudo add-apt-repository ppa:iosf/suricata-stable
+apt-get install software-properties-common iproute-2 nano curl
 
 sudo apt install suricata
 
@@ -8,24 +8,28 @@ sudo nano /etc/suricata/suricata.yaml
 
 community-id: false a true
 
-ip -p -j route show default
+ip a
 
 cambiar en /etc/suricata/suricata.yaml --> af-packet --> interface por la interfaz de red usada
 
-```
-detect-engine:
-  -  rule-reload: true
-```
+<pre><code>default-rule-path: /var/lib/suricata/rules
+rule-files:
+  - suricata.rules
 
-pidof suricata --> sudo kill -usr2 \<pid-suricata>
+<strong>
+</strong><strong>detect-engine:
+</strong>  -  rule-reload: true
+</code></pre>
 
-sudo suricata-update
+suricata-update
 
-sudo suricata-update list-sources
+suricata-update list-sources
 
-sudo suricata-update enable-source et/open
+suricata-update enable-source et/open
 
-sudo suricata -T -c /etc/suricata/suricata.yaml -v
+suricata -T -c /etc/suricata/suricata.yaml -v
+
+nano /etc/default/suricata --> cambiar a yes
 
 curl http://testmynids.org/uid/index.html
 
